@@ -1,0 +1,27 @@
+Crear Carpeta Proyecto final —> dentro crear carpeta Entornos;
+Crear entorno virtual. Se crea por las distintas versiones de Django que puede haber.
+Ingresar al cmd;
+Ejecutar comando: pip list—> para chequear si está instalado el virtualenv;
+Ejecutar comando: pip install virtualenv - (Para instalar el paquete);
+Nos movemos a: Cd Entornos;
+Ejecutar comando: python -m virtualenv .venv_Proyecto
+Activar el entorno -> en la siguiente ruta para llegar al archivo: \proyecto_final\Entornos>.venv_Proyecto\Scripts\activate
+Luego ir a la carpeta Proyecto_final;
+Instalar Django. Con el entorno activado, se ejecuta el siguiente comando: pip install django. (Se instala la última versión de Django)
+Inicializar proyecto Django:
+Ir al visual. Luego ir a la cmd y ejecutar, para activar el entorno: >.venv_Proyecto\Scripts\activate
+Ejecutar comando dentro de la carpeta proyecto-final: django-admin startproject (nombre del proyecto)
+Instalar requerimientos del proyecto, ejecutar comando: pip install -r requirements.txt
+
+
+
+Archivos: 
+Urls —> Contiene las rutas dónde pueda ingresar; Esta URL está conectada a una VISTA(TEMPLATE);
+Setting —> Configuración de mi proyecto. 
+Se crea en el proyecto, el archivo views.py;
+En la BASE del proyecto_final, se crea la carpeta TEMPLATES;
+Luego en Setting → en la sección TEMPLATES:  'DIRS': [ BASE_DIR / 'templates'],
+En el archivo urls.py: importar las vistas: from .views import *;
+Crear el archivo db.sqlite3;
+Ejecutar comando: python manage.py migrate . Para realizar las migraciones;
+Ejecutar comando: Para correr el servidor: python manage.py runserver;
