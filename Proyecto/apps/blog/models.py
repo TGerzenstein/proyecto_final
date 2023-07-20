@@ -1,6 +1,7 @@
 from django.db import models
-#from django.contrib.auth.models import Usuarios #Usuario que publicará el artículo
 from django.utils import timezone
+
+from apps.usuarios.models import Usuarios
 
 
 
@@ -15,9 +16,9 @@ class Post(models.Model):
     category = models.ForeignKey(Categorias, on_delete=models.SET_NULL, null=True)
     titulo = models.CharField(max_length=255, null=False)
     texto = models.TextField(null=False)
-    fecha_agregado = models.DateTimeField(date_now_add=True)
-    colaborador = models.ForeignKey(Usuarios, on_delete=models.CASCADE, null=False)
-    imagen = models.ImageField(null=True, blank=True, upload_to='media')
+    fecha_agregado = models.DateTimeField(auto_now_add=True)
+    colaborador = models.ForeignKey(Usuarios, on_delete=models.SET_NULL, null=True, default=1)
+    imagen = models.ImageField(null=True, blank=True, upload_to='blog')
     published = models.DateTimeField(default=timezone.now)
 
 
