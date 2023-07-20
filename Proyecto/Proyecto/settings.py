@@ -26,6 +26,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-h$i9kp8^!29lz74yp-rr%mof=*h!u+c-wqf(6w*g%j(u!rzky1'
 #-----------------------------------------------------------------------------------
 
+AUTH_USER_MODEL = 'usuarios.Usuarios'
+
+#-----------------------------------------------------------------------------------
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -45,6 +49,7 @@ INSTALLED_APPS = [
 
     #apps propias
     'apps.blog',
+    'apps.usuarios',
 ]
 
 #-----------------------------------------------------------------------------------
@@ -86,13 +91,14 @@ WSGI_APPLICATION = 'Proyecto.wsgi.application'
 
 #-----------------------------------------------------------------------------------
 
-# Database
-# https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'proyecto',
+        'USER': 'root',
+        'PASSWORD': 'root',
+        'PORT': '3306'
     }
 }
 
@@ -121,7 +127,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es'
 
 TIME_ZONE = 'America/Argentina/Buenos_Aires'
 

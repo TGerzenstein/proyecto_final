@@ -20,10 +20,9 @@ from Proyecto.views import index
 from django.urls import path, include
 
 
-
-
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('index/', index),
+    path('index/', index, name='index'),
     path('blog/', include('apps.blog.urls')),
+    path('usuarios/', include('apps.usuarios.urls'),)
 ]
