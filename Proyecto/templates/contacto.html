@@ -1,7 +1,54 @@
 {% extends 'base.html' %}
 {% load static %}
-
-
 {% block titulo %}
 <title>Contacto</title>
+{% endblock %}
+{% block navegacion %}
+{% include 'navegacion.html' %}
+{% endblock %}
+{% block contenido %}
+<!-- Formulario de contacto -->
+<div class="body-contacto">
+<div class="contact_form">
+  <div class="formulario">
+    <h1>Contacto</h1>
+  <p class="formulario-subtitulo">Escríbenos y nos pondremos en contacto contigo</p>
+    <form action="" method="post">				
+      <p>
+        <label for="nombre" class="colocar_nombre">Nombre:
+          <span class="obligatorio">*</span>
+        </label>
+        <input type="text" name="introducir_nombre" id="nombre" required="obligatorio" placeholder="Nombre(s)">
+      </p>
+      <p>
+        <label for="email" class="colocar_email">Email:
+          <span class="obligatorio">*</span>
+        </label>
+        <input type="email" name="introducir_email" id="email" required="obligatorio" placeholder="yosoy@micorreo.com">
+      </p>
+      <p>
+        <label for="telefone" class="colocar_telefono">Teléfono:
+        </label>
+        <input type="tel" name="introducir_telefono" id="telefono" placeholder="Ej: 3724 400417 (Sin 0 y sin 15)">
+      </p>			
+      <p>
+        <label for="asunto" class="colocar_asunto">Asunto:
+          <span class="obligatorio"> * </span>
+        </label>
+        <input type="text" name="introducir_asunto" id="assunto" required="obligatorio" placeholder="Escribe un asunto">
+      </p>		
+      <p>
+        <label for="mensaje" class="colocar_mensaje">Mensaje:
+          <span class="obligatorio"> * </span>
+        </label>                     
+        <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje" required="obligatorio" placeholder="Escribe tu comentario..."></textarea> 
+      </p>
+      <p class="aviso">
+        <span class="obligatorio"> * </span>Campos obligatorios
+      </p>	  								
+      <button type="submit" name="enviar_formulario" id="enviar"><p>Enviar</p></button>					
+    </form>
+  </div>	
+</div>
+</div>
 {% endblock %}
