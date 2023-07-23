@@ -6,18 +6,13 @@ h1 {
 	font-family: 'Noto Sans', sans-serif;
 }
 
+
 /* Index */
 
-.contenedor-01 {
-	width: 100px;
-    height: 100px;
+.btn-bg_registrar {
+	background-color: #8C56B2;
+	color: #fff;
 }
-
-.contenedor-02 {
-	width: 100px;
-	height: 100px;
-}
-
 
 
 /* Formulario de contacto */
@@ -143,7 +138,56 @@ p {
 
 /* Footer */
 
-.footer-1 {
+.seccion-footer {
+    background-color: #1b1b32;
+    color: #fff;
+}
+
+.footer-texto {
+	font-family: 'Noto Sans', sans-serif;
+    font-size: 1.5rem;
+    padding: 20px;
+    margin-bottom: 30px;
+	color: #fbfbfb;
+	font-weight: 700;
+}
+
+.icons-social-media a {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    margin: 10px;
+    border: 2px solid white;
+    border-radius: 50%;
+    transition: all 0.2s ease-in;
+}
+
+.icons-social-media i {
+    color: white;
+    font-size: 1.5rem;
+    transition: all 0.2s ease-in;
+}
+
+.icons-social-media a:hover {
+    background-color: white;
+    border: 2px solid rgb(13,110,253);
+}
+
+.icons-social-media a:hover i {
+    color: #000;
+}
+
+.copyright {
+    font-size: 15px;
+    color: #aeaeae;
+    padding: 20px;
+}
+
+
+/* .footer-1 {
    background-color: black;
    padding: 2rem;
 }
@@ -151,4 +195,4 @@ p {
 .texto-footer {  
   color: honeydew;
   text-align: center;
-}
+} */
