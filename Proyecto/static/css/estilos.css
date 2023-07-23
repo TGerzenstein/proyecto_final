@@ -1,3 +1,23 @@
+h1 {
+	font-size: 30px;  
+	text-align: left; 
+	padding-bottom: 20px; 
+	color: #8C56B2;
+	font-family: 'Noto Sans', sans-serif;
+}
+
+/* Index */
+
+.contenedor-01 {
+	width: 100px;
+    height: 100px;
+}
+
+.contenedor-02 {
+	width: 100px;
+	height: 100px;
+}
+
 
 
 /* Formulario de contacto */
@@ -10,29 +30,22 @@
 	
 }
 
-h1 {
-	font-size: 39px;  
-	text-align: left; 
-	padding-bottom: 20px; 
-	color: #8C56B2;
-}
-
 .formulario-subtitulo {
 	font-size: 16px; 
 	padding-bottom: 30px;
 	color: #0e0e0e;
-  font-weight: 580;   
+    font-weight: 580;   
 }
 
 .contact_form {	
 	width: 460px; 
-  height: auto;
-  margin: 80px auto;
+    height: auto;
+    margin: 80px auto;
 	border-radius: 10px;  
 	padding-top: 30px;
 	padding-bottom: 20px;  
-  background-color: #fbfbfb; 
-  padding-left: 30px; 
+    background-color: #fbfbfb; 
+    padding-left: 30px; 
 }
 
 input { 
@@ -45,7 +58,7 @@ input {
 	border-color: #8C56B2; 
 	margin-top: 10px;  
 	padding-left: 10px;
-  margin-bottom: 20px; 
+    margin-bottom: 20px; 
 }
 
 textarea {
@@ -58,13 +71,13 @@ textarea {
 	border-color: #8C56B2; 
 	margin-top: 10px;  
 	padding-left: 10px;
-  margin-bottom: 20px; 
-  padding-top: 15px; 
+    margin-bottom: 20px; 
+    padding-top: 15px; 
 }
 
 
 label {
-  display: block; 
+    display: block; 
 	float: center; 	
 }
 
@@ -81,7 +94,7 @@ button {
 	border-style: solid; 
 	border-radius: 10px;	
 	width: 420px;   
-  cursor: pointer;
+    cursor: pointer;
 }
 
 
@@ -107,12 +120,12 @@ p {
 
 
 ::-webkit-input-placeholder {
- color: #a8a8a8;
+   color: #a8a8a8;
 }
 
 
 ::-webkit-textarea-placeholder {
- color: #a8a8a8;
+   color: #a8a8a8;
 }
 
 
