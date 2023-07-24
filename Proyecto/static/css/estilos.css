@@ -1,11 +1,23 @@
 h1 {
-	font-size: 30px;  
+	font-size: 60px;  
 	text-align: left; 
 	padding-bottom: 20px; 
-	color: #000;
-	font-family: 'Noto Sans', sans-serif;
+	color:#0c2e3e;
+    font-family: 'Lato', sans-serif;
+	font-weight: 700;
 }
 
+/* Barra de navegacion */
+
+.navbar {
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+	letter-spacing: 0.20px;
+}
+
+.nav-item {
+	padding-right: 20px;
+}
 
 /* Index */
 
@@ -14,6 +26,13 @@ h1 {
 	color: #fff;
 }
 
+.subtitulo-portada {
+	font-family: 'Lato', sans-serif;
+	font-size: 19px;
+	color: #0c2e3e;
+	font-style: normal;
+	font-weight: 400;
+}
 
 /* Formulario de contacto */
 
