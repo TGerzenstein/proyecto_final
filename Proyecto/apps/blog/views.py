@@ -1,7 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from .models import *
+from .models import Categorias, Post
+from django.views.generic import ListView
+
 
 # Create your views here.
 
@@ -18,3 +20,5 @@ class AgregarPost(CreateView):
     fields = ['category','titulo','texto','imagen']
     template_name = 'blog/agregar_post.html'
     success_url = reverse_lazy('index')
+
+
