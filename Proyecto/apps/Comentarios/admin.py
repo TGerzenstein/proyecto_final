@@ -3,4 +3,4 @@ from.models import Comentarios
 
 # Register your models here.
 
-admin.site.Register(Comentarios)
+admin.site.register(Comentarios)

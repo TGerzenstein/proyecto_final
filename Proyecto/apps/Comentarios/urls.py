@@ -4,11 +4,11 @@ from .views import AgregarComentario, ModificarComentario, EliminarComentario
 app_name = 'apps.Comentarios'
 
 urlpatterns = [
-    path('agregar_Comentario/', AgregarComentario, name='agregar_Comentario'),
-    path("modificarComentario/<int:pk>",
-         ModificarComenrario.as_view(), name='modificarComentario'),
+    path('agregar_comentario/', AgregarComentario, name='agregar_comentario'),
+    path("modificar_comentario/<int:pk>",
+         ModificarComentario.as_view(), name='modificar_comentario'),
     path("eliminar_opinion/<int:pk>",
-         EliminarComentrario.as_view(), name='eliminarComentario'),
+         EliminarComentario.as_view(), name='eliminar_comentario'),
 ]
 
 
