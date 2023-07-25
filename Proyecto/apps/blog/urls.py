@@ -10,7 +10,7 @@ app_name= 'apps.blog'
 
 urlpatterns = [
     path('agregar_categoria/', AgregarCategoria.as_view(),name='agregar_categoria'),
-    path('agregar_post', AgregarPost.as_view(), name='agregar_post'),
+    path('agregar_post/', AgregarPost.as_view(), name='agregar_post'),
 ] + static(settings.MEDIA_URL, document_root= settings.MEDIA_ROOT)
 
 urlpatterns += staticfiles_urlpatterns()
