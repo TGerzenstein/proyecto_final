@@ -26,8 +26,8 @@ AUTH_USER_MODEL = 'usuarios.Usuarios'
 #-----------------------------------------------------------------------------------
 
 LOGIN_URL          = reverse_lazy('apps.usuarios:iniciar_sesion')
-LOGIN_REDIRECT_URL = reverse_lazy('inicio')
-LOGOUT_REDIRECT_URL= reverse_lazy('inicio')
+LOGIN_REDIRECT_URL = reverse_lazy('index')
+LOGOUT_REDIRECT_URL= reverse_lazy('index')
 
 #-----------------------------------------------------------------------------------
 
