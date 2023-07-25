@@ -11,6 +11,8 @@ app_name = 'apps.usuarios'
 
 urlpatterns = [
     path("registrar/", RegistrarUsuario.as_view(), name='registrar'),
+    path('iniciar_sesion/', LoginView.as_view(
+        template_name="usuarios/iniciar_sesion.html"), name='iniciar_sesion'),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 urlpatterns += staticfiles_urlpatterns()
