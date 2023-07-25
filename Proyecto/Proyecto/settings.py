@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     #apps propias
     'apps.blog',
     'apps.usuarios',
+    'apps.Comentarios',
 ]
 
 #-----------------------------------------------------------------------------------
