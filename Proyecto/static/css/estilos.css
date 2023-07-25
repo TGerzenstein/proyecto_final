@@ -1,5 +1,10 @@
+* {
+	font-family: 'Lato', sans-serif;	
+}
+
+
 h1 {
-	font-size: 60px;  
+	font-size: 55px;  
 	text-align: left; 
 	padding-bottom: 20px; 
 	color:#0c2e3e;
@@ -13,6 +18,7 @@ h1 {
 	font-family: 'Lato', sans-serif;
 	font-weight: 400;
 	letter-spacing: 0.20px;
+	font-size: 18px;
 }
 
 .nav-item {
@@ -21,8 +27,12 @@ h1 {
 
 /* Index */
 
+.seccion-index-body {
+	padding: 40px;
+}
+
 .btn-bg_registrar {
-	background-color: #8C56B2;
+	background-color: #6E6ECC;
 	color: #fff;
 }
 
@@ -33,6 +43,20 @@ h1 {
 	font-style: normal;
 	font-weight: 400;
 }
+
+
+/* Contacto */
+
+.seccion-contacto-body {
+	padding: 40px;
+}
+
+.bloque-contacto {
+	padding-top: 10px;
+	width: 420px;
+	
+}
+
 
 /* Formulario de contacto */
 
@@ -102,8 +126,8 @@ button {
 	margin-bottom: 20px; 
 	margin-top: 10px; 	
 	text-transform: uppercase;
-	background-color:#8C56B2; 
-	border-color: #8C56B2; 
+	background-color: #6E6ECC; 
+	border-color: #6E6ECC; 
 	border-style: solid; 
 	border-radius: 10px;	
 	width: 420px;
