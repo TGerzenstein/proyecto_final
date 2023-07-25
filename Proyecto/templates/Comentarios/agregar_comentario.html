@@ -1,7 +1,13 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block contenido %}
+
 <div class="row justify-content-md-center ">
   <div class="col-md-6">
     <div class="list-group-item gap-3 py-3" aria-current="true">
-      <form method="POST" enctype="multipart/form-data">{%csrf_token%}
+      <form method="POST" enctype="multipart/form-data">{% csrf_token %}
           <div>
             {{form.as_p}}
           </div>
@@ -22,10 +28,10 @@
                     <div class="modal-header">
                       <h5 class="modal-title" id="exampleModalLabel">Error</h5>
                       <button type="button" class="btn-close" data-bs-dismiss="modal"
-                              aria-label="Close"></button>
+                              aria-label="Close">Hola</button>
                     </div>
                     <div class="modal-body">
-                      Usted tiene que iniciar sesión o registrarse para poder opinar
+                      Tenés que iniciar sesión o registrarte para poder opinar
                     </div>
                     <div class="modal-footer">
                       <a class="btn btn-outline-secondary" href="{% url 'apps.usuarios:iniciar_sesion' %}"
@@ -34,10 +40,11 @@
                         target="_blank">Registrarse</a>
                     </div>
                 </div>
-                /div>
           </div>
            {% endif %}
       </form>
     </div>
   </div>
 </div>
+
+{% endblock %}

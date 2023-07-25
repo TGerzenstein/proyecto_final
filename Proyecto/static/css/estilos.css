@@ -12,7 +12,17 @@ h1 {
 	font-weight: 700;
 }
 
+
 /* Barra de navegacion */
+.d-img {
+	height: 80%;
+	object-fit: cover;
+	filter: brightness(0,6);
+}
+
+.d-item {
+	height: 200%;
+}
 
 .navbar {
 	font-family: 'Lato', sans-serif;
@@ -93,7 +103,7 @@ input {
 	border-radius: 5px;  
 	border-style: solid; 
 	border-width: 1px; 
-	border-color: #8C56B2; 
+	border-color: #6E6ECC; 
 	margin-top: 10px;  
 	padding-left: 10px;
     margin-bottom: 20px; 
@@ -106,7 +116,7 @@ textarea {
 	border-radius: 5px;  
 	border-style: solid; 
 	border-width: 1px; 
-	border-color: #8C56B2; 
+	border-color: #6E6ECC; 
 	margin-top: 10px;  
 	padding-left: 10px;
     margin-bottom: 20px; 
@@ -141,7 +151,7 @@ button p {
 
 
 span {
-	color: #8C56B2; 
+	color: #6E6ECC; 
 }
 
 
@@ -223,7 +233,7 @@ p {
 
 .copyright {
     font-size: 15px;
-    color: #aeaeae;
+    color: #d7d7e4;
     padding: 20px;
 }
 

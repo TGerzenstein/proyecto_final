@@ -10,22 +10,37 @@
 {% include 'navegacion.html' %}
 {% endblock %}
 {% block contenido %}
-<div class="seccion-index-body">
-  <h1>Diario del Metaverso</h1>
-  <p class="subtitulo-portada"> Información, novedades y última hora sobre Metaverso.</p>
-</div>
+<!-- <div class="seccion-index-body">
+  <h1></h1>
+ <p class="subtitulo-portada"> Información, novedades y última hora sobre Metaverso.</p>
+</div> -->
 <div class="row justify-content-center">
-  <div class="col-sm-8">
+  <div>
     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="{% static 'img/portada01.jpg' %}" class="d-block w-100" alt="...">
+        <div class="carousel-item active d-item">
+          <img src="{% static 'img/portada01.jpg' %}" class="d-block w-100 d-img" alt="...">
+          <div class="carousel-caption top-0 mt-4">
+            <p class="mt-5 fs-3 text-uppercase"></p>
+            <p class="display-1 fw-bolder text-white">Diario del Metaverso</p>
+            <a type="button" class="btn btn-bg_registrar" href="{% url 'apps.usuarios:registrar' %}">Registrar</a>
+          </div>
         </div>
-        <div class="carousel-item">
-          <img src="{% static 'img/portada02.jpg' %}" class="d-block w-100" alt="...">
+        <div class="carousel-item d-item">
+          <img src="{% static 'img/portada02.jpg' %}" class="d-block w-100 d-img" alt="...">
+          <div class="carousel-caption top-0 mt-4">
+            <p class="mt-5 fs-3 text-uppercase"></p>
+            <p class="display-1 fw-bolder text-white">Diario del Metaverso</p>
+            <a type="button" class="btn btn-bg_registrar" href="{% url 'apps.usuarios:registrar' %}">Registrar</a>
+          </div>
         </div>
-        <div class="carousel-item">
-          <img src="{% static 'img/portada03.jpg' %}" class="d-block w-100" alt="...">
+        <div class="carousel-item d-item">
+          <img src="{% static 'img/portada03.jpg' %}" class="d-block w-100 d-img" alt="...">
+          <div class="carousel-caption top-0 mt-4">
+            <p class="mt-5 fs-3 text-uppercase"></p>
+            <p class="display-1 fw-bolder text-white">Diario del Metaverso</p>
+            <a type="button" class="btn btn-bg_registrar" href="{% url 'apps.usuarios:registrar' %}">Registrar</a>
+          </div>
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
@@ -39,6 +54,5 @@
     </div>
   </div>
 </div>
-<a type="button" class="btn btn-bg_registrar" href="{% url 'apps.usuarios:registrar' %}">Registrar</a>
 {% endblock %}
 
