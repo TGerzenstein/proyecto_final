@@ -46,7 +46,7 @@ class ListarPost(ListView):
     def get_context_data(self):
         context = super().get_context_data()
         categorias = Categorias.objects.all()
-        context['category'] = categorias
+        context['categorias'] = categorias
         return context
 
     def get_queryset(self) -> QuerySet[Any]:
@@ -63,9 +63,9 @@ def ListarLibrosPorCategoria(request, categoria):
     post = Post.objects.filter(
         categoria=categorias2[0].id).order_by('fecha_agregado')
     categorias = Categorias.objects.all()
-    template_name = 'libros/listar_libros.html'
+    template_name = 'blog/listar_post.html'
     contexto = {
-        'libros': post,
+        'post': post,
         'categorias': categorias
     }
     return render(request, template_name, contexto)

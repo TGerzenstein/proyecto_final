@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block titulo %}
+<title>Noticias</title>
+{% endblock %}
+
+{% block navegacion %}
+{% include 'navegacion.html' %}
+{% endblock %}
+
+{% block contenido %}
+
+<section data-bs-version="5.1" class="timeline3 cid-tf4QbpyVP7" id="timeline3-o">
+    <form action="{% url 'apps.blog:listar_post' %}" class="d-flex" role="search" method="get">
+        <input class="form-control me-2" style="height: 25%; width: 95%; margin-top: 2%;" type="search"
+            placeholder="Buscar libro" aria-label="Search" name="buscador">
+        <button class="btn-primary" style="height: 25%; margin-top: 2.5%;" type="submit">Buscar</button>
+    </form>
+    <form method="GET" action="">
+        <button class="btn-primary" name="orden" type="submit" value="fecha">Ordenar por
+            fecha</button>
+        <button class="btn-primary" name="orden" type="submit" value="titulo">Ordenar por
+            título</button>
+    </form>
+    {% if post %}
+    <div class="container-fluid" style="margin-top: 2%">
+        <div class="mbr-section-head">
+            <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2" style="text-align: center;">
+                <strong>Noticias</strong>
+            </h3>
+        </div>
+        <div class="row" style="margin-bottom: 2%;">
+            {% for p in post %}
+
+            <div class="col-md-4 mb-3">
+                <div class="card" style="text-align: center;">
+                    {% if p.imagen %}
+                    <div class="card-img-top" style="display: block; width: 70%; margin: auto;">
+                        <img src="{{ p.imagen.url }}" class="card-img-top w-50" alt="{{p.imagen}}">
+                    
+                    </div>
+                    {% endif %}
+                    <div class="card-body">
+                        <h5 class="card-title">{{p.titulo}}</h5>
+                        <p style='text-align: center;' class="mbr-timeline-date "><small
+                                class="text-body-secondary">{{p.fecha_agregado}}</small></p>
+                        <p class="card-text">{{p.texto}}</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Categoria: {{p.categoria}}</li>
+                        
+                        <li class="list-group-item">Agregado por: {{p.colaborador}}</li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="" class="btn btn-primary"
+                            style="font-size: small;">Leer
+                            más</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}{% endif %}
+</section>
+{% endblock %}

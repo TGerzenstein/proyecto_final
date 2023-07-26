@@ -10,10 +10,12 @@
 
 
 {% block contenido %}
-<h1>Registro</h1>
+<h1>Registro de usuario</h1>
 <div class="container" style="margin: 10%;">
-    <form enctype="multipart/form-data" action="" method="post">{% csrf_token %}
-        {{form.as_p}}
+  <hr>
+    <form enctype="multipart/form-data" action="" method="post">
+      {% csrf_token %}
+      {{form.as_p}}
       <div class="col-auto">
         <button type="submit" class="btn btn-bg_registrar mb-3">Registrarse</button>
       </div>

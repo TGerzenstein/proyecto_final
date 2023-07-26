@@ -17,7 +17,7 @@ class Post(models.Model):
     texto = models.TextField(null=False)
     fecha_agregado = models.DateTimeField(auto_now_add=True)
     colaborador = models.ForeignKey(Usuarios, on_delete=models.SET_NULL, null=True, default=1)
-    imagen = models.ImageField(null=True, blank=True, upload_to='blog')
+    imagen = models.ImageField(null=True, blank=True, upload_to='blog', default="blog/imagen_default.png")
     published = models.DateTimeField(default=timezone.now)
 
 
