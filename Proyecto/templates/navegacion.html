@@ -45,9 +45,9 @@
           <li class="nav-item">
             <a class="nav-link" href="{% url 'apps.usuarios:registrar' %}">Registro</a>
           </li>
-<!--           <li class="nav-item">
-            <a class="nav-link" href="{% url 'apps.blog:agregar_categoria' %}"></a>
-          </li> -->
+          <li class="nav-item">
+            <a class="nav-link" href=""></a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="{% url 'apps.usuarios:iniciar_sesion' %}">Iniciar sesión</a>
           </li>
@@ -80,12 +80,12 @@
                     Administrador
                 </a>
                 <ul class="dropdown-menu">
-                    <!-- <li>
-                      <a class="dropdown-item" href="">Agregar categoria</a>
+                    <li>
+                      <a class="dropdown-item" href="{% url 'apps.blog:agregar_categoria' %}">Agregar categoria</a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="">Agregar </a>
-                    </li> -->
+                      <a class="dropdown-item" href="{% url 'apps.blog:agregar_post' %}">Agregar noticia</a>
+                    </li>
                     <li>
                       <a class="dropdown-item" href="{% url 'apps.usuarios:listar_usuarios' %}">Listar
                             usuarios</a>

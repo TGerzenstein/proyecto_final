@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block titulo %}
+<title>Usuarios registrados</title>
+{% endblock %}
+
+{% block navegacion %}
+{% include 'navegacion.html' %}
+{% endblock %}
+
+{% block contenido %}
+<section data-bs-version="5.1" class="team2 cid-tffTM7TT6b">
+  <h2 style="text-align:center; margin-top: 12%;"><strong>Usuarios </strong></h2>
+  <div class="container">
+      {% for item in usuarios %}
+      <a class="btn btn-light" style="width: 100%;" href="{% url 'apps.usuarios:eliminar_usuario' item.pk %}">Eliminar usuario: {{item.username}}</a>
+      <div class="card">
+            <div class="card-wrapper">
+                <div class="row align-items-center">
+                    <div class="col-12 col-md-4">
+                        <div class="image-wrapper">
+                            <img src="{{ item.imagen.url }}" class="d-block w-50">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md">
+                        <div class="card-box">
+                            <h6>
+                                <strong>Nombre: {{ item.nombre }}</strong>
+                            </h6>
+                            <h6>
+                                <strong>Apellido: {{ item.apellido }}</strong>
+                            </h6>
+                            <p>
+                                <i>Email: {{ item.email }}</i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+      </div>      
+  </div>
+</section>
+{% endblock %}

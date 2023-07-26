@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+
+<h1>Eliminar noticia</h1>
+
+<p>¿Seguro que deseas eliminar la noticia?</p>
+
+<form method="POST">
+    {% csrf_token %}
+    <input type="submit" action="" value="Si, eliminar." />
+</form>
+<a href="{% url 'apps.libros:listar_libros' %}" class="btn btn-primary" style="font-size: small;">No, volver.</a>
+{% endblock %}
