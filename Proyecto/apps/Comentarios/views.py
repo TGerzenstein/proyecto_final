@@ -12,7 +12,6 @@ def AgregarComentario(request):
     form = ComentariosForm(request.POST or None)
     if form.is_valid():
         form.save()
-        #form = ComentariosForm
 
     contexto = {
         'form': form,
