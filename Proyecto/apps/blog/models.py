@@ -26,16 +26,3 @@ class Post(models.Model):
     
     class Meta:
         ordering = ('-published',)
-
-
-""" 
-#Consultar: Si esta class se puede desarrollar en la app blog;
-
-class Contacto(models.Model):
-    nombre = models.CharField(max_length=100)
-    email = models.EmailField()   
-    telefono = models.CharField(max_length=100)
-
-
-
- """

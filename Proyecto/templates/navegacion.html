@@ -6,9 +6,7 @@
       <img src="{% static 'img/logo.jpg' %}" width="10%">
     </a>
     <ul class="nav nav-underline">
-      
       {% if user.is_authenticated %}>
-
       <div class="list-group-item d-flex gap-3 py-3" aria-current="true">
         <img src="{{ user.imagen.url }}" alt="perfil" width="30" height="30" class="rounded-circle flex-shrink-0">
         <ul class="navbar-nav">
@@ -26,9 +24,7 @@
           </li> 
         </ul>
       </div>
-
       {% else %}
-
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -57,46 +53,45 @@
           </li>
           {% endif %}
         </ul>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                      aria-expanded="false">
+                      Noticias
+                  </a>
+                  <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="{% url 'apps.blog:listar_post' %}">Todos</a></li>
+                      {% for i in categorias %}
+                      <li><a class="dropdown-item"
+                              href="">>>{{i.titulo}}</a>
+                      </li>
+            {% endfor %}
+                  </ul>
+              </li>
+            {% if user.es_colaborador %}
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                      aria-expanded="false">Administrador</a>
+                  <ul class="dropdown-menu">
+                      <li>
+                        <a class="dropdown-item" 
+                           href="{% url 'apps.blog:agregar_categoria' %}">Agregar categoria</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" 
+                           href="{% url 'apps.blog:agregar_post' %}">Agregar noticia</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" 
+                           href="{% url 'apps.usuarios:listar_usuarios' %}">Listar usuarios</a>
+                      </li>
+                  </ul>
+              </li>
+            {% endif %}
+            </ul>  
+        </div>      
       </div>
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    Noticias
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="{% url 'apps.blog:listar_post' %}">Todos</a></li>
-                    {% for i in categorias %}
-                    <li><a class="dropdown-item"
-                            href="">>>{{i.titulo}}</a>
-                    </li>
-          {% endfor %}
-                </ul>
-            </li>
-
-          {% if user.es_colaborador %}
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">Administrador</a>
-                <ul class="dropdown-menu">
-                    <li>
-                      <a class="dropdown-item" 
-                         href="{% url 'apps.blog:agregar_categoria' %}">Agregar categoria</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" 
-                         href="{% url 'apps.blog:agregar_post' %}">Agregar noticia</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" 
-                         href="{% url 'apps.usuarios:listar_usuarios' %}">Listar usuarios</a>
-                    </li>
-                </ul>
-            </li>
-          {% endif %}
-          </ul>  
-      </div>      
     </ul>
   </div>
 </nav>

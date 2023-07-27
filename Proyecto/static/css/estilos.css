@@ -43,7 +43,7 @@ h1 {
 }
 
 .btn-bg_registrar {
-	background-color: #6E6ECC;
+	background-color: #1b1b32;
 	color: #fff;
 }
 
@@ -137,8 +137,8 @@ button {
 	margin-bottom: 20px; 
 	margin-top: 10px; 	
 	text-transform: uppercase;
-	background-color: #6E6ECC; 
-	border-color: #6E6ECC; 
+	background-color: #1b1b32; 
+	border-color: #1b1b32; 
 	border-style: solid; 
 	border-radius: 10px;	
 	width: 420px;
