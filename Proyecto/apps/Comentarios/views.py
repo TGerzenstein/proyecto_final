@@ -33,5 +33,5 @@ class ModificarComentario(LoginRequiredMixin, UpdateView):
 
 class EliminarComentario(LoginRequiredMixin, DeleteView):
     model = Comentarios
-    template_name = 'post/confirma_eliminar.html'
-    success_url = reverse_lazy("apps.post:listar_post")
+    template_name = 'comentarios/confirma_eliminar.html'
+    success_url = reverse_lazy("apps.Comentarios:")

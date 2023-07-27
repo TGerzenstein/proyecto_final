@@ -38,23 +38,19 @@
                         <p class="mbr-text mbr-fonts-style display-7">{{post.texto}}</p>
                     </div>
                 </div>
-                {% for item in comentarios %}
-                {% if user.is_authenticated and user.id == item.usuario.id%}
-                <div class="dropdown">
-                    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        Opinion
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <li><a class="dropdown-item"
-                                href="">Modificar
-                                opinion</a></li>
-                        <li><a class="dropdown-item" href="">Eliminar
-                                opinion</a></li>
-                    </ul>
-                    {% endif %}
-                </div>
-                <div class="row justify-content-md-center ">
+            {% for item in comentarios %}
+                {% if user.is_authenticated and user.id == item.usuario.id %}
+                    <div class="dropdown">
+                      <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-bs-toggle="dropdown" aria-expanded="false">Opinion
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <li><a class="dropdown-item" href="{% url 'apps.Comentarios:modificar_comentario' item.pk %}">Modificar opinion</a></li>
+                        <li><a class="dropdown-item" href="{% url 'apps.Comentarios:eliminar_comentario' item.pk %}">Eliminar opinion</a></li>
+                      </ul>
+                    </div>
+                {% endif %}
+                  <div class="row justify-content-md-center ">
                     <div class="col-md-6">
                         <div class="list-group-item d-flex gap-3 py-3" aria-current="true">
                             <img src="{{ item.usuario.imagen.url }}" style="width:10%; height: 10%;" alt="twbs"
@@ -69,7 +65,7 @@
                         </div>
                     </div>
                 </div>
-                {% endfor %}
+            {% endfor %}
                 <div class="mb-3 display-7">
                     {% include 'comentarios/agregar_comentario.html' %}
                 </div>
@@ -77,4 +73,4 @@
         </div>
     </section>
 </div>
-{%endblock %}
+{% endblock %}

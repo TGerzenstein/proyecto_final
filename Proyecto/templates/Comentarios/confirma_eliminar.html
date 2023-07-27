@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+
+<h1>Eliminar comentario</h1>
+
+<p>¿Seguro que deseas eliminar el comentario?</p>
+
+<form method="POST">
+    {% csrf_token %}
+    <input type="submit" action="" value="Sí, eliminar." />
+</form>
+<a href="{% url 'apps.blog:listar_post' %}" class="btn btn-primary" style="font-size: small;">No, volver.</a>
+{% endblock %}
