@@ -6,7 +6,7 @@
       <img src="{% static 'img/logo.jpg' %}" width="10%">
     </a>
     <ul class="nav nav-underline">
-      {% if user.is_authenticated %}>
+      {% if user.is_authenticated %}
       <div class="list-group-item d-flex gap-3 py-3" aria-current="true">
         <img src="{{ user.imagen.url }}" alt="perfil" width="30" height="30" class="rounded-circle flex-shrink-0">
         <ul class="navbar-nav">
@@ -42,9 +42,9 @@
           <li class="nav-item">
             <a class="nav-link" href="{% url 'apps.usuarios:registrar' %}">Registro</a>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link" href=""></a>
-          </li>
+          </li> -->
           <li class="nav-item">
             <a class="nav-link" href="{% url 'apps.usuarios:iniciar_sesion' %}">Iniciar sesión</a>
           </li>
@@ -61,12 +61,12 @@
                       Noticias
                   </a>
                   <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="{% url 'apps.blog:listar_post' %}">Todos</a></li>
-                      {% for i in categorias %}
-                      <li><a class="dropdown-item"
-                              href="">>>{{i.titulo}}</a>
-                      </li>
-            {% endfor %}
+                    <li><a class="dropdown-item" href="{% url 'apps.blog:listar_post' %}">Todos</a></li>
+                    {% for i in categorias %}
+                    <li><a class="dropdown-item"
+                            href="{% url 'apps.blog:listar_por_categoria' i.nombre %}"> {{i.nombre}} </a>
+                    </li>
+                    {% endfor %}
                   </ul>
               </li>
             {% if user.es_colaborador %}

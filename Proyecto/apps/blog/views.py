@@ -69,21 +69,21 @@ class ListarPost(ListView):
         return queryset.order_by('titulo')
 
 
-def ListarLibrosPorCategoria(request, categoria):
-    categorias2 = Categorias.objects.filter(nombre=categoria)
-    post = Post.objects.filter(
-        categoria=categorias2[0].id).order_by('fecha_agregado')
+def ListarPostPorCategoria(request, categoria):
+    categorias2 = Categorias.objects.filter(nombre = categoria)
+    post = Post.objects.filter(categoria = categorias2[0].id).order_by('fecha_agregado')
     categorias = Categorias.objects.all()
     template_name = 'blog/listar_post.html'
     contexto = {
         'post': post,
         'categorias': categorias
     }
+    
     return render(request, template_name, contexto)
 
 
 
-def post_detalle(request, id):
+def Post_detalle(request, id):
     post = Post.objects.get(id=id)
     comentarios = Comentarios.objects.filter(post=id)
     form = ComentariosForm(request.POST)

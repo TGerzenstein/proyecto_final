@@ -3,13 +3,14 @@
 
 {% block titulo %}
 <title>{{post.titulo}}</title>
-{%endblock %}
+{% endblock %}
 
 {% block navegacion %}
 {% include 'navegacion.html' %}
 {% endblock %}
 
 {% block contenido %}
+
 {% if user.es_colaborador %}
 <div class="dropdown">
     <button class="btn btn-outline-secondary dropdown-toggle " type="button" id="dropdownMenuButton1"
@@ -76,5 +77,5 @@
             </div>
         </div>
     </section>
-
-    {%endblock %}
+</div>
+{%endblock %}

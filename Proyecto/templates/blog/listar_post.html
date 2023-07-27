@@ -52,12 +52,11 @@
                         <p class="card-text">{{p.texto}}</p>
                     </div>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Categoria: {{p.categoria}}</li>
-                        
+                        <li class="list-group-item">Categoria: {{p.category}}</li>
                         <li class="list-group-item">Agregado por: {{p.colaborador}}</li>
                     </ul>
                     <div class="card-body">
-                        <a href="" class="btn btn-primary btn-bg_registrar"
+                        <a href="{% url 'apps.blog:post_detalle' p.id %}" class="btn btn-primary btn-bg_registrar"
                             style="font-size: small;">Leer más</a>
                     </div>
                 </div>
