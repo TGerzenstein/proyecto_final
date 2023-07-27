@@ -7,7 +7,6 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from typing import Any, Dict
 from django.db.models.query import QuerySet
 
-
 from apps.Comentarios.models import Comentarios
 from apps.Comentarios.forms import ComentariosForm
 
@@ -19,6 +18,7 @@ class AgregarCategoria(LoginRequiredMixin, CreateView):
     fields = ['nombre']
     template_name = 'blog/agregar_categoria.html'
     success_url = reverse_lazy('index')
+
 
 
 class AgregarPost(LoginRequiredMixin, CreateView):
@@ -41,10 +41,12 @@ class ModificarPost(LoginRequiredMixin, UpdateView):
     success_url = reverse_lazy('apps.blog:listar_post')
 
 
+
 class EliminarPost(LoginRequiredMixin, DeleteView):
     model = Post
     template_name = 'blog/confirma_eliminar.html'
     success_url = reverse_lazy('apps.blog:listar_post')
+
 
 
 class ListarPost(ListView):
@@ -67,6 +69,7 @@ class ListarPost(ListView):
         if query:
             queryset = queryset.filter(titulo__icontains=query)
         return queryset.order_by('titulo')
+
 
 
 def ListarPostPorCategoria(request, categoria):
@@ -110,6 +113,7 @@ def Post_detalle(request, id):
 # -------------Ejemplo de: Ordenar por ------------------------------
 
 
+
 def ordenar_libros_por(request):
     # Obtener el parámetro 'orden' de la URL(para eso en html debe haber un elemento con name='orden' y un valor(value=''))
     orden = request.GET.get('orden', '')
@@ -127,3 +131,5 @@ def ordenar_libros_por(request):
         'post': post,
     }
     return render(request, 'blog/listar_post.html', context)
+
+
