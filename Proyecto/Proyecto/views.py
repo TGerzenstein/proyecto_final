@@ -2,7 +2,8 @@ from django.shortcuts import render
 
 
 def index(request):
-    return render(request, 'index.html') 
+    template_name = 'index.html'
+    return render(request, template_name) 
 
 def contacto(request):
     return render(request, 'contacto.html')

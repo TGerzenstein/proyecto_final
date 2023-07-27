@@ -14,7 +14,8 @@
   <h2 style="text-align:center; margin-top: 12%;"><strong>Usuarios </strong></h2>
   <div class="container">
       {% for item in usuarios %}
-      <a class="btn btn-light" style="width: 100%;" href="{% url 'apps.usuarios:eliminar_usuario' item.pk %}">Eliminar usuario: {{item.username}}</a>
+      <a class="btn btn-light" style="width: 100%;" 
+         href="{% url 'apps.usuarios:eliminar_usuario' item.pk %}">Eliminar a: {{item.username}}</a>
       <div class="card">
             <div class="card-wrapper">
                 <div class="row align-items-center">

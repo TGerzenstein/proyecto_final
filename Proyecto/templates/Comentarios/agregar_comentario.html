@@ -1,9 +1,5 @@
-{% extends 'base.html' %}
-
-{% load static %}
 
 {% block contenido %}
-
 <div class="row justify-content-md-center ">
   <div class="col-md-6">
     <div class="list-group-item gap-3 py-3" aria-current="true">
@@ -12,17 +8,15 @@
             {{form.as_p}}
           </div>
             {% if user.is_authenticated %}
-          <input class="btn btn-outline-secondary" 
-          type="submit" value="Opinar" />
-                {% else %}
-          <button type="button" class="btn btn-outline-secondary" 
-          data-bs-toggle="modal"
+          <input class="btn btn-outline-secondary" type="submit" value="Opinar" />
+            {% else %}
+          <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal"
                   data-bs-target="#exampleModal">
                 Comentar
           </button>
           <!-- Modal -->
           <div class="modal fade" id="exampleModal" tabindex="-1" 
-          aria-labelledby="exampleModalLabel"aria-hidden="true">
+               aria-labelledby="exampleModalLabel"aria-hidden="true">
               <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -40,11 +34,11 @@
                         target="_blank">Registrarse</a>
                     </div>
                 </div>
-          </div>
+              </div>
+           </div>  
            {% endif %}
       </form>
     </div>
   </div>
 </div>
-
 {% endblock %}

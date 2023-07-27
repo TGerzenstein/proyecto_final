@@ -16,8 +16,8 @@
     <button class="btn btn-outline-secondary dropdown-toggle " type="button" id="dropdownMenuButton1"
         data-bs-toggle="dropdown" aria-expanded="false">Administrar</button>
     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-        <li><a class="dropdown-item" href="">Modificar noticia</a></li>
-        <li><a class="dropdown-item" href="">Eliminar noticia</a></li>
+        <li><a class="dropdown-item" href="{% url 'apps.blog:modificar_post' post.pk %}">Modificar noticia</a></li>
+        <li><a class="dropdown-item" href="{% url 'apps.blog:eliminar_post' post.pk %}">Eliminar noticia</a></li>
     </ul>{% endif %}
     <section data-bs-version="5.1" class="image1 cid-tf6nPGwDQN" 
              id="image1-q">
@@ -47,9 +47,9 @@
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <li><a class="dropdown-item"
-                                href="{% url 'apps.opiniones:modificar_opinion' item.pk %}">Modificar
+                                href="">Modificar
                                 opinion</a></li>
-                        <li><a class="dropdown-item" href="{% url 'apps.opiniones:eliminar_opinion' item.pk %}">Eliminar
+                        <li><a class="dropdown-item" href="">Eliminar
                                 opinion</a></li>
                     </ul>
                     {% endif %}
@@ -69,7 +69,6 @@
                         </div>
                     </div>
                 </div>
-
                 {% endfor %}
                 <div class="mb-3 display-7">
                     {% include 'comentarios/agregar_comentario.html' %}
