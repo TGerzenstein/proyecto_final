@@ -110,26 +110,18 @@ def Post_detalle(request, id):
     template_name = 'blog/post.html'
     return render(request, template_name, contexto)
 
-# -------------Ejemplo de: Ordenar por ------------------------------
-
 
 
 def ordenar_libros_por(request):
-    # Obtener el parámetro 'orden' de la URL(para eso en html debe haber un elemento con name='orden' y un valor(value=''))
     orden = request.GET.get('orden', '')
-    # Validamos lo que contiene value
     if orden == 'fecha':
-        # Ordenar por fecha(Si quisiera desc seria: ('-fecha_agregado'))
         post = Post.objects.order_by('fecha_agregado')
     elif orden == 'titulo':
-        # Ordenar por título(Si quisiera desc seria: ('-titulo'))
-        post = Comentarios.objects.order_by('titulo')
-    else:  # Si no hay nada solo todos sin orden
-        post = Comentarios.objects.all()  # Obtener todos los artículos sin ordenar
+        post = Post.objects.order_by('titulo')
+    else: 
+        post = Post.objects.all()
 
     context = {
         'post': post,
     }
     return render(request, 'blog/listar_post.html', context)
-
-
