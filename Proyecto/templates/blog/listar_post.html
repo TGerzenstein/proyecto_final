@@ -14,9 +14,11 @@
 
 <section data-bs-version="5.1" class="timeline3 cid-tf4QbpyVP7" id="timeline3-o">
     <form action="{% url 'apps.blog:listar_post' %}" class="d-flex" role="search" method="get">
-        <input class="form-control me-2" style="height: 25%; width: 100%; margin-top: 2%; margin-left: 1%;" type="search"
-            placeholder="Buscar noticia" aria-label="Search" name="buscador">
-        <button class="btn-primary text-white" style="height: 22%; margin-top: 2%; margin-right: 1%;" type="submit">Buscar</button>
+        <input class="form-control me-2" 
+               style="height: 26%; width: 100%; margin-top: 2%; margin-left: 1%;" type="search"
+               placeholder="Buscar noticia" aria-label="Search" name="buscador">
+        <button class="btn-primary text-white" style="height: 22%; margin-top: 2%; margin-right: 1%;" 
+                type="submit">Buscar</button>
     </form>
     <form method="GET" action="{% url 'apps.blog:ordenar_por' %}">
         <button class="btn-primary text-white" name="orden" 
@@ -27,7 +29,7 @@
     {% if post %}
     <div class="container-fluid" style="margin-top: 2%">
         <div class="mbr-section-head">
-            <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2" 
+            <h3 class="mbr-section-title s-noticias align-center mb-0 display-2" 
                 style="text-align: center; padding: 10px;">Noticias
             </h3>
         </div>

@@ -40,6 +40,11 @@ h1 {
 	padding: 40px;
 }
 
+.t-colores {
+    color: #0c2e3e;
+}	
+
+
 .btn-bg_registrar {
 	background-color: #1b1b32;
 	color: #fff;
@@ -203,6 +208,15 @@ p {
 
 
 /* Modificar noticias */
+
+.s-noticias {
+    font-size: 55px;  
+    text-align: left; 
+    padding-bottom: 20px; 
+    color:#0c2e3e;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+}
 
 .btn-administrar {
 	margin-left: 78px;

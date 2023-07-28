@@ -42,7 +42,7 @@
             {% for item in comentarios %}
                 {% if user.is_authenticated and user.id == item.usuario.id %}
                     <div class="dropdown">
-                      <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
+                      <button class="btn btn-bg_registrar dropdown-toggle" type="button" id="dropdownMenuButton"
                         data-bs-toggle="dropdown" aria-expanded="false">Opinion
                       </button>
                       <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
