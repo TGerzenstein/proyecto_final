@@ -18,7 +18,7 @@
             placeholder="Buscar noticia" aria-label="Search" name="buscador">
         <button class="btn-primary text-white" style="height: 22%; margin-top: 2%; margin-right: 1%;" type="submit">Buscar</button>
     </form>
-    <form method="GET" action="">
+    <form method="GET" action="{% url 'apps.blog:ordenar_por' %}">
         <button class="btn-primary text-white" name="orden" 
                 type="submit" value="fecha" style="margin-left: 1%;">Ordenar por fecha</button>
         <button class="btn-primary text-white" name="orden" 
