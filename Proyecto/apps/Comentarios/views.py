@@ -24,7 +24,7 @@ class ModificarComentario(LoginRequiredMixin, UpdateView):
     model = Comentarios
     fields = ['texto']
     template_name = 'comentarios/agregar_comentario.html'
-    success_url = reverse_lazy('apps.post:listar_post')
+    success_url = reverse_lazy('apps.blog:listar_post')
 
     def get_queryset(self):
         queryset = super().get_queryset()
@@ -34,4 +34,4 @@ class ModificarComentario(LoginRequiredMixin, UpdateView):
 class EliminarComentario(LoginRequiredMixin, DeleteView):
     model = Comentarios
     template_name = 'comentarios/confirma_eliminar.html'
-    success_url = reverse_lazy("apps.blog:post")
+    success_url = reverse_lazy("apps.blog:listar_post")
