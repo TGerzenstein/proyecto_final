@@ -3,7 +3,7 @@ from .views import AgregarCategoria, AgregarPost
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
-from .views import AgregarCategoria, AgregarPost, EliminarPost, ListarPost, ListarPostPorCategoria, Post_detalle, ModificarPost
+from .views import AgregarCategoria, AgregarPost, EliminarPost, ListarPost, ListarPostPorCategoria, Post_detalle, ModificarPost, ordenar_libros_por
 
 
 app_name= 'apps.blog'
@@ -18,6 +18,7 @@ urlpatterns = [
     path("listar_post/", ListarPost.as_view(), name='listar_post'),
     path("post_detalle/<int:id>", Post_detalle, name='post_detalle'),
     path("listar_por_categoria/<str:categoria>", ListarPostPorCategoria, name='listar_por_categoria'),
+    path("ordenar_por/", ordenar_libros_por, name='ordenar_por'),
 ] + static(settings.MEDIA_URL, document_root= settings.MEDIA_ROOT)
 
 urlpatterns += staticfiles_urlpatterns()
