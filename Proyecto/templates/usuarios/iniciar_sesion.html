@@ -14,25 +14,24 @@
 <div class="inicio_sesion">
   <form method="post">
       {% csrf_token %}
-      <section style="margin-top: 5%; padding-right: 20px;" data-bs-version="5.1" 
-               class="form4 cid-tf6M1H8RDD mbr-fullscreen" id="form4-11">
+      <section style="margin-top: 5%; padding-right: 20px;" data-bs-version="5.1" class="form4 cid-tf6M1H8RDD mbr-fullscreen" id="form4-11">
         <div class="container">
           <div class="row content-wrapper justify-content-center">
             <div class="col-lg-3 offset-lg-1 mbr-form" data-form-type="formoid">
-              <div class="dragArea row">
+              <div class="dragArea row mx-auto d-block">
                 <div class="col-lg-12 col-md-12 col-sm-12">
-                  <h1 class="mbr-section-title mb-4 display-2"><strong>Iniciar sesión</strong></h1>
+                  <h1 class="mbr-section-title mb-4 display-5"><strong>Iniciar sesión</strong></h1>
                 </div>
                 <div class="col-lg-12 col-md-12 col-sm-12">
                   <p class="mbr-text mbr-fonts-style mb-4 display-7">Ingrese su usuario y contraseña:</p>
                 </div>
                 {{form.as_p}}
-                <input style="margin-left: 70px;" type="submit" value="Iniciar sesión">
+                <input class="btn-bg_registrar" style="margin-left: 70px;" type="submit" value="Iniciar sesión">
               </div>
             </div>
             <div class="col-lg-7 offset-lg-1 col-12">
               <div class="image-wrapper">
-                <img class="w-50" src="{% static 'img/inicio_sesion.jpg' %}" alt="">
+                <img class="w-75 mx-auto d-block" src="{% static 'img/iniciar_sesion.jpg' %}" alt="">
               </div>
             </div>
           </div>
