@@ -185,6 +185,13 @@ p {
 	border: 1px solid grey;
 }
 
+/* Modificar noticias */
+
+.btn-administrar {
+	margin-left: 78px;
+	background-color: #1b1b32;
+	color: #fff;
+}
 
 /* Footer */
 

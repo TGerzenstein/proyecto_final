@@ -74,7 +74,7 @@ class ListarPost(ListView):
 
 def ListarPostPorCategoria(request, categoria):
     categorias2 = Categorias.objects.filter(nombre = categoria)
-    post = Post.objects.filter(categoria = categorias2[0].id).order_by('fecha_agregado')
+    post = Post.objects.filter(category = categorias2[0].id).order_by('fecha_agregado')
     categorias = Categorias.objects.all()
     template_name = 'blog/listar_post.html'
     contexto = {

@@ -13,12 +13,13 @@
 
 {% if user.es_colaborador %}
 <div class="dropdown">
-    <button class="btn btn-outline-secondary dropdown-toggle " type="button" id="dropdownMenuButton1"
+    <div>
+    <button class="btn btn-administrar dropdown-toggle " type="button" id="dropdownMenuButton1"
         data-bs-toggle="dropdown" aria-expanded="false">Administrar</button>
     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
         <li><a class="dropdown-item" href="{% url 'apps.blog:modificar_post' post.pk %}">Modificar noticia</a></li>
         <li><a class="dropdown-item" href="{% url 'apps.blog:eliminar_post' post.pk %}">Eliminar noticia</a></li>
-    </ul>{% endif %}
+    </ul></div>{% endif %}
     <section data-bs-version="5.1" class="image1 cid-tf6nPGwDQN" 
              id="image1-q">
         <div class="container">
