@@ -28,3 +28,6 @@ class EliminarUsuario(LoginRequiredMixin, DeleteView):
     model = Usuarios
     template_name = 'usuarios/confirma_eliminar.html'
     success_url = reverse_lazy('apps.usuarios:listar_usuarios')
+
+
+

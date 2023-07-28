@@ -3,7 +3,7 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand logo" href="{% url 'index' %}">
-      <img src="{% static 'img/logo.jpg' %}" width="10%">
+      <img src="{% static 'img/logo.jpg' %}" width="10%"  alt="logo de marca">
     </a>
     <ul class="nav nav-underline">
       {% if user.is_authenticated %}
@@ -33,8 +33,8 @@
                  aria-expanded="false">{{user.username}}
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="">
-                      Modificar perfil</a></li>
+               <!-- <li>  <a class="dropdown-item" href="{% url 'apps.usuarios:cerrar_sesion' %}">
+                      Modificar perfil</a></li> -->
               <li><a class="dropdown-item" href="{% url 'apps.usuarios:cerrar_sesion' %}">Cerrar
                       sesión</a></li>
             </ul>
