@@ -10,9 +10,10 @@
 
 
 {% block contenido %}
-<h1>Registro de usuario</h1>
-<div class="container" style="margin: 10%;">
-  <hr>
+<div class="registro-container">
+  <h1 class="registro-usuario">Registro de usuario</h1>
+  <div class="container">
+    <hr>
     <form enctype="multipart/form-data" action="" method="post">
       {% csrf_token %}
       {{form.as_p}}
@@ -20,7 +21,9 @@
         <button type="submit" class="btn btn-bg_registrar mb-3">Registrarse</button>
       </div>
     </form>
+  </div>
 </div>
+
 
 {% endblock %}
 
